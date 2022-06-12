@@ -20,9 +20,9 @@ RUN yum install -y apache-maven
 # (G)
 ENV JAVA_HOME /etc/alternatives/jre
 # (H)
-RUN git clone https://github.com/debugroom/mynavi-sample-aws-ecs.git /usr/local/mynavi-sample-aws-ecs
+RUN git clone https://github.com/tm-hack/bff.git /usr/local/workspace/bff
 # (I)
-RUN mvn install -f /usr/local/mynavi-sample-aws-ecs/pom.xml
+RUN mvn install -f /usr/local/workspace/bff/pom.xml
 
 # (J)
 RUN cp /etc/localtime /etc/localtime.org
