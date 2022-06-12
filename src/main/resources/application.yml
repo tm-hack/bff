@@ -1,0 +1,2 @@
+service:
+  dns: http://internal-ma-masuda-private-alb-592620197.ap-northeast-1.elb.amazonaws.com
