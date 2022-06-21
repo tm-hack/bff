@@ -20,9 +20,9 @@ RUN yum install -y apache-maven
 # (G)
 ENV JAVA_HOME /etc/alternatives/jre
 # (H)
-RUN git clone https://github.com/tm-hack/bff.git /usr/local/bff
+RUN git clone https://github.com/tm-hack/bff.git /var/local/bff
 # (I)
-RUN mvn install -f /usr/local/bff/pom.xml
+RUN mvn install -f /var/local/bff/pom.xml
 
 # (J)
 RUN cp /etc/localtime /etc/localtime.org
@@ -33,4 +33,4 @@ RUN ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 EXPOSE 8080
 
 # (M)
-CMD java -jar -Dspring.profiles.active=production /usr/local/bff/target/mynavi-sample-aws-ecs-bff-0.0.1-SNAPSHOT.jar
+CMD java -jar -Dspring.profiles.active=production /var/local/bff/target/mynavi-sample-aws-ecs-bff-0.0.1-SNAPSHOT.jar
