@@ -33,4 +33,4 @@ RUN ln -sf  /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 EXPOSE 8080
 
 # (M)
-CMD java -jar -Dspring.profiles.active=production /var/local/bff/target/mynavi-sample-aws-ecs-bff-0.0.1-SNAPSHOT.jar
+CMD java -jar -Dspring.profiles.active=production /var/local/bff/target/mynavi-sample-ecs-bff-0.0.1-SNAPSHOT.jar
